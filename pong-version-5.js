@@ -53,23 +53,23 @@ function ballMove() {
 
 
   // Bounce when touch the edge of the canvas
-   if (x < 0) {//left
+   if (x < 15) {//left
      botroundwin();
      reset();
      //insert player lost function here
   }
-  if (y < 0) {//top
-    y = 0;
+  if (y < 10) {//top
+    y =  10;
     vy = -vy * bMultiplier;
   }
-  if (x > width) { //right
+  if (x > 690) { //right
     //insert bot lost function here
     playerroundwin();
     reset();
 
   }
-  if (y > height - 20) {//bottom
-    y = height - 20;
+  if (y > height - 10) {//bottom
+    y = height - 10;
     vy = -vy * bMultiplier;
   }
 
@@ -151,7 +151,7 @@ function reset(){
 function botMove(){
   //volg y waarde met deze (random)snelheid zodat hij ooit verliest
   if(botRectY > 0 && botRectY < 510){
-  if(vx > 0){
+  if(vx > -1){
     botspeed = botspeed + 0.00001  }
   else{
     botspeed = botspeed - 0.00001
@@ -175,7 +175,7 @@ window.addEventListener('keyup',function(e){
 function gameLoop() {
 
     if (keyState[38]  || keyState[87]){
-       if (rectY > 0){
+       if (rectY > -1){
             rectY = rectY - 6
             }
     }
