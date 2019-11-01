@@ -103,27 +103,33 @@ function botroundwin(){
   //bot wins the round :(
   if(botscore < 6){
   botscore++;
-  bot = rect(660, 300, 20, 100);
+  botRectY = 350
+  document.getElementById("botscore").innerHTML = botscore;
   return botscore;
   }
   //bot wins the game :(
   else{
-    console.log("U LOSE!");
     botscore = 7;
+    document.getElementById("botscore").innerHTML = botscore;
+    document.getElementById("scoreboard").innerHTML ="U LOSE, GET LOST SON!!";
+    //insert win function call which hides all other elements!
     return;
   }
-  console.log(botscore);
+
 }
 function playerroundwin(){
   //player wins the round!
   if(playerscore < 6){
   playerscore++;
-  console.log(playerscore);
+  document.getElementById("playerscore").innerHTML = playerscore;
   return playerscore;
   }
   //player wins the game!
   else{
-     console.log("U WIN TAKE ANY PRICE FROM THE TOP SHELF!");
+    playerscore = 7;
+    document.getElementById("playerscore").innerHTML = playerscore;
+     document.getElementById("scoreboard").innerHTML ="U WIN! TAKE ANY PRICE FROM THE TOP SHELF!";
+     //insert win function call which hides all other elements!
     return;
   }
 }
