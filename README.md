@@ -1,2 +1,2 @@
-# andere-projecten
-Hier zijn al mijn kleine projecten die te klein zijn voor een eigen repository
+# Ping-pong
+This was my idea for a mobile app for a school project.
